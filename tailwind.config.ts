@@ -54,6 +54,8 @@ export default {
       fontFamily: {
         inter: ["var(--font-inter)"],
         "space-grotesk": ["var(--font-space-grotesk)"],
+        "big-shoulders-inline": ["var(--font-big-shoulders-inline)"],
+        bigshoulders: ["var(--font-big-shoulders)"],
       },
     },
   },

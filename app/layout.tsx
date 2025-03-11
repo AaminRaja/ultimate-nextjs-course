@@ -2,15 +2,30 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const inter = localFont({
+  src: "./fonts/InterVF.ttf",
+  variable: "--font-inter",
+  weight: "100 200 300 400 500 600 700 800 900",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const spaceGrotesk = localFont({
+  src: "./fonts/SpaceGroteskVF.ttf",
+  variable: "--font-space-grotesk",
+  weight: "300 400 500 600 700",
+});
+
+const bigShouldersInline = localFont({
+  src: "./fonts/BigShouldersInlineVF.ttf",
+  variable: "--font-big-shoulders-inline",
+  weight: "100 200 300 400 500 600 700 800 900",
+});
+
+const bigShoulders = localFont({
+  src: "./fonts/BigShouldersVF.ttf",
+  variable: "--font-big-shoulders",
+  weight: "100 200 300 400 500 600 700 800 900",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} ${spaceGrotesk.variable} ${bigShouldersInline.variable} ${bigShoulders.className} antialiased`}
       >
         {children}
       </body>
